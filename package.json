@@ -1,23 +1,23 @@
 {
-  "name": "Nexter",
+  "name": "nexter",
   "version": "1.0.0",
   "description": "Nexter webpage",
-  "main": "index.js",
- "scripts": {
-  "dev": "npx sass sass/main.scss css/style.css --watch",
+  "private": true,
+  "scripts": {
+    "dev": "npx sass sass/main.scss css/style.css --watch",
 
-  "compile:sass": "npx sass sass/main.scss css/style.comp.css",
-  "prefix:css": "npx postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
-  "compress:css": "npx sass css/style.prefix.css css/style.css --style=compressed",
+    "compile:sass": "npx sass sass/main.scss css/style.comp.css",
+    "prefix:css": "npx postcss css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "npx postcss css/style.prefix.css -o css/style.css",
 
-  "build": "npm run compile:sass && npm run prefix:css && npm run compress:css"
-},
+    "build": "npm run compile:sass && npm run prefix:css && npm run compress:css"
+  },
   "author": "Jonas",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "concat": "^1.0.3",
     "sass": "^1.77.5",
-    "postcss-cli": "^10.1.0"
+    "postcss": "^8.4.38",
+    "postcss-cli": "^10.1.0",
+    "autoprefixer": "^10.4.19"
   }
 }

@@ -4,12 +4,11 @@
   "description": "Nexter webpage",
   "main": "index.js",
  "scripts": {
-  "watch:sass": "sass sass/main.scss css/style.css --watch",
-  "dev": "sass sass/main.scss css/style.css --watch",
+  "dev": "npx sass sass/main.scss css/style.css --watch",
 
-  "compile:sass": "sass sass/main.scss css/style.comp.css",
-  "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
-  "compress:css": "sass css/style.prefix.css css/style.css --style=compressed",
+  "compile:sass": "npx sass sass/main.scss css/style.comp.css",
+  "prefix:css": "npx postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
+  "compress:css": "npx sass css/style.prefix.css css/style.css --style=compressed",
 
   "build": "npm run compile:sass && npm run prefix:css && npm run compress:css"
 },
